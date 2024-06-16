@@ -41,7 +41,7 @@ def main():
     unsafe_allow_html=True,
     )
     
-    app_mode = st.sidebar.selectbox('Choose the App Mode', ['About App', 'Blood Cell Detection', 'Lung Classification', "Ultrasound Segmentation"])
+    app_mode = st.sidebar.selectbox('Choose the App Mode', ['About App', 'Musculoskeletal Fracture Classification','Blood Cell Detection', 'Lung Classification', "Ultrasound Segmentation"])
     
     
     if app_mode == 'About App':
@@ -92,6 +92,26 @@ def main():
         
         img_file_buffer_classify = st.sidebar.file_uploader("Upload an image", type=['jpg','jpeg', 'png'], key=1)
         DEMO_IMAGE = "DEMO_IMAGES/094.png"
+        
+        if img_file_buffer_classify is not None:
+            img = cv.imdecode(np.fromstring(img_file_buffer_classify.read(), np.uint8), 1)
+            image = np.array(Image.open(img_file_buffer_classify))
+        else:
+            img = cv.imread(DEMO_IMAGE)
+            image = np.array(Image.open(DEMO_IMAGE))
+        st.sidebar.text("Original Image")
+        st.sidebar.image(image)
+        
+        # predict
+        classify.predict(img, st)
+    elif app_mode == "Musculoskeletal Fracture Classification":
+        
+        st.header("Classification with YOLOv8")
+        
+        st.sidebar.markdown("----")
+        
+        img_file_buffer_classify = st.sidebar.file_uploader("Upload an image", type=['jpg','jpeg', 'png'], key=1)
+        DEMO_IMAGE = "DEMO_IMAGES/fracture.png"
         
         if img_file_buffer_classify is not None:
             img = cv.imdecode(np.fromstring(img_file_buffer_classify.read(), np.uint8), 1)
