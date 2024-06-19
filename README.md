@@ -1,5 +1,5 @@
 # DISCLAIMER
-This project is an app that was primarily developed by sevdaimany. This is the original github https://github.com/sevdaimany/YOLOv8-Medical-Imaging/tree/master. The vast majority of the text below and code is the same as the project mentioned except for a few minor changes that we (John, Jack, Cameron, and Derick) added to make it better equipped for the EE-24235-01 The Science and Engineering of Digital Photography taught by Professor Hoffman at the London 1 Summer Engineering Study Abroad Program 2024. 
+This project is an app that was primarily developed by sevdaimany. This is the original github https://github.com/sevdaimany/YOLOv8-Medical-Imaging/tree/master. The vast majority of the text below and code is the same as the project mentioned except for a few minor changes that we (John, Jack, Cameron, and Derick) added to make it better equipped for the EE-24235-01 The Science and Engineering of Digital Photography taught by Professor Hoffman at the London 1 Summer Engineering Study Abroad Program 2024. In order to fully utilize the app, it's recommended that you create an anaconda virtual environment and activate the environment.yml file provided. Due to the wide array of packages and modules needed, it is recommended that anaconda is used. 
 
 
 
