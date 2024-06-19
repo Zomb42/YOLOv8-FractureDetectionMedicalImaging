@@ -5,7 +5,7 @@ from PIL import Image
 import detection.detect as detect
 import classification.classify as classify
 import segmentation.segment as segment
-
+import muscledetect.muscledetect as mfrac
 
 
 
@@ -14,7 +14,7 @@ def train_models():
     print("[INFO] Training Detection model done!")
     classify.train()
     print("[INFO] Training Classification model done!")
-    
+    mfrac.train()
     # RUN THE FOLLOWING FOR PREPERING INPUT DATA FOR TRAINIG SEGMENTATION MODEL 
     segment.prepare_input()    
     segment.train()
@@ -50,7 +50,7 @@ def main():
         
         
         st.markdown("<style> p{margin: 10px auto; text-align: justify; font-size:20px;}</style>", unsafe_allow_html=True)      
-        st.markdown("<p> To reiterate the readme document, the vast majority of this app was created by sevdaimany. Derick has just modified it a bit for the EE-24235-01 The Science and Engineering of Digital Photography class. <p>", unsafe_allow_html = True)
+        st.markdown("<p> To reiterate the readme document, the majority of this app was created by sevdaimany. The group of John, Jack, Cameron, and Derick has just modified it a bit for the EE-24235-01 The Science and Engineering of Digital Photography class. <p>", unsafe_allow_html = True)
         st.markdown("<p>🚀Welcome to the introduction page of our project! In this project, we will be exploring the YOLO (You Only Look Once) algorithm. YOLO is known for its ability to detect objects in an image in a single pass, making it a highly efficient and accurate object detection algorithm.🎯</p>", unsafe_allow_html=True)  
         st.markdown("<p>The latest version of YOLO, YOLOv8, released in January 2023 by Ultralytics, has introduced several modifications that have further improved its performance. 🌟</p>", unsafe_allow_html=True)
         st.markdown("""<p>🔍Some of these modifications are:<br>
@@ -104,6 +104,7 @@ def main():
         
         # predict
         classify.predict(img, st)
+
     elif app_mode == "Musculoskeletal Fracture Classification":
         
         st.header("Classification with YOLOv8")
@@ -123,7 +124,15 @@ def main():
         st.sidebar.image(image)
         
         # predict
-        classify.predict(img, st)
+        mfrac.predict(img, st)
+
+
+
+
+
+
+
+
         
     elif app_mode == "Ultrasound Segmentation":
         
@@ -157,7 +166,7 @@ if __name__ == "__main__":
     try:
         
         # RUN THE FOLLOWING ONLY IF YOU WANT TO TRAIN MODEL AGAIN 
-        # train_models()
+        #train_models()
         
         main()
     except SystemExit:

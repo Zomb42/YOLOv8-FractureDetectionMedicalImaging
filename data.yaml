@@ -1,0 +1,6 @@
+train: /Users/derickshi/Documents/Yolomedical/train/
+val: /Users/derickshi/Documents/Yolomedical/test/
+
+# Classes
+nc: 2
+names: ['Non_fractured', 'Fractured']
