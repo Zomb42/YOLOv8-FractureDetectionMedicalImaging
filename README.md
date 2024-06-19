@@ -1,12 +1,12 @@
 # DISCLAIMER
-This project is an app that was primarily developed by sevdaimany. This is the original github https://github.com/sevdaimany/YOLOv8-Medical-Imaging/tree/master. The vast majority of the text below and code is the same as the project mentioned except for a few minor changes that I (Derick) added to make it better equipped for the EE-24235-01 The Science and Engineering of Digital Photography taught by Professor Hoffman at the London 1 Summer Engineering Study Abroad Program 2024. 
+This project is an app that was primarily developed by sevdaimany. This is the original github https://github.com/sevdaimany/YOLOv8-Medical-Imaging/tree/master. The vast majority of the text below and code is the same as the project mentioned except for a few minor changes that we (John, Jack, Cameron, and Derick) added to make it better equipped for the EE-24235-01 The Science and Engineering of Digital Photography taught by Professor Hoffman at the London 1 Summer Engineering Study Abroad Program 2024. 
 
 
 
 # YOLOv8 Medical Imaging
 
 YOLO is known for its ability to detect objects in an image in a single pass, making it a highly efficient and accurate object detection algorithm.🎯
-
+https://github.com/ultralytics/ultralytics?tab=readme-ov-file 
 The latest version of YOLO, YOLOv8, released in January 2023 by Ultralytics, has introduced several modifications that have further improved its performance.
 
 In this project, I will focus on three major computer vision tasks that YOLOv8 can be used for: **classification**, **detection**, and **segmentation**. I will explore how YOLOv8 can be applied in the 
