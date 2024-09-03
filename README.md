@@ -1,7 +1,13 @@
 # DISCLAIMER
-This project is an app that was primarily developed by sevdaimany. This is the original github https://github.com/sevdaimany/YOLOv8-Medical-Imaging/tree/master. The vast majority of the text below and code is the same as the project mentioned except for a few minor changes that we (John, Jack, Cameron, and Derick) added to make it better equipped for the EE-24235-01 The Science and Engineering of Digital Photography taught by Professor Hoffman at the London 1 Summer Engineering Study Abroad Program 2024. In order to fully utilize the app, it's recommended that you create an anaconda virtual environment and activate the environment.yml file provided. Due to the wide array of packages and modules needed, it is recommended that anaconda is used. 
+This project is an app that was primarily developed by sevdaimany. This is the original github https://github.com/sevdaimany/YOLOv8-Medical-Imaging/tree/master. The vast majority of the text below and code is the same as the project mentioned except for a few minor changes that we (John, Jack, Cameron, and Derick) added to make it better equipped for the EE-24235-01 The Science and Engineering of Digital Photography taught by Professor Hoffman at the London 1 Summer Engineering Study Abroad Program 2024. I essentially just fixed several small issues with the original file and trained/developed an additional yolov8 model on some fracture xrays images to illustrate how deep learning models could assist medical professionals.
 
+In order to fully utilize the app, it's recommended that you create an anaconda virtual environment and activate the environment.yml file provided. Due to the wide array of packages and modules needed, it is recommended that anaconda is used instead of just directly installing the requirements file. You would then clone the repositary, cd into the file, and run the app.py file by doing:
 
+```bash
+streamlit run app.py
+```
+
+The following readme text until the end is directly copied over from the orignal github as I thought it was still pretty informative:
 
 # YOLOv8 Medical Imaging
 
@@ -59,7 +65,7 @@ I used Streamlit to create a user-friendly interface for easy interaction with t
 ## Installation and Usage
 
 ### Installation
-
+(Make sure to read the disclaimer above)
 1. Clone this repository to your local machine:
 
    ```bash
